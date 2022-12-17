@@ -1,5 +1,10 @@
 const mensagem = document.querySelector('.container h1');
 
+function getnomeMes(numeroMes){
+    const meses = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro']
+    return meses[numeroMes]
+}
+
 function getMesTexto(mes){
     let mesTexto;
     switch(mes){
@@ -45,6 +50,10 @@ function getMesTexto(mes){
     }
    
 }
+function getDiaSemanaTexto2(diaSemana){
+    const diasSemana = ['domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sabado']
+    return diasSemana[diaSemana];
+}
 
 function getDiaSemanaTexto(diaSemana){
     let diaSemanaTexto;
@@ -65,25 +74,34 @@ function getDiaSemanaTexto(diaSemana){
             diaSemanaTexto = 'Quinta-feira';
             return diaSemanaTexto;
         case 5:
-            diaSemanaTexto = 'Sexta-feira';
-            return diaSemanaTexto;
-        case 6:
-            diaSemanaTexto = 'Sabado';
-            return diaSemanaTexto;
-        default:
-            diaSemanaTexto = '';
-            return diaSemanaTexto;
-    }
+             diaSemanaTexto = 'Sexta-feira';
+             return diaSemanaTexto;
+         case 6:
+             diaSemanaTexto = 'Sabado';
+             return diaSemanaTexto;
+         default:
+             diaSemanaTexto = '';
+             return diaSemanaTexto;
+     }
    
-}
-const data = new Date('2019-10-07 22:52:00');
-const horas = data.getHours();
-const minutos =data.getMinutes();
-const diaTexto = data.getDate();
-const anoTexto = data.getFullYear();
-const diaSemana = data.getDay();
-const diaSemanaTexto = getDiaSemanaTexto(diaSemana);
-const mesAno = data.getMonth();
-const mesAnoTexto = getMesTexto(mesAno);
+ }
+ const data = new Date('2019-10-07 22:52:00');
+ const horas = data.getHours();
+ const minutos =data.getMinutes();
+ const diaTexto = data.getDate();
+ const anoTexto = data.getFullYear();
+ const diaSemana = data.getDay();
+ const diaSemanaTexto = getDiaSemanaTexto2(diaSemana);
+ const mesAno = data.getMonth();
+ const mesAnoTexto = getnomeMes(mesAno);
 
-mensagem.innerHTML = `${diaSemanaTexto}, ${diaTexto} de ${mesAnoTexto} de ${anoTexto} <br> ${horas}:${minutos}`;
+ mensagem.innerHTML = `${diaSemanaTexto}, ${diaTexto} de ${mesAnoTexto} de ${anoTexto} <br> ${horas}:${minutos}`;
+
+
+//const opcoes = {
+//    dateStyle: 'full',
+//    timeStyle: 'short'
+//};
+
+//mensagem.innerHTML = data.toLocaleDateString('pt-BR');
+//mensagem.innerHTML = data.toLocaleDateString('pt-BR',{dateStyle:'full',timeStyle:'short'});
