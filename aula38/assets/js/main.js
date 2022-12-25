@@ -7,7 +7,7 @@ const backgroundColorBody = estilosBody.backgroundColor;//pega o backgroundColor
 //console.log(backgroundColorBody)
 
 for (let p of ps){
-    p.style.backgroundColor = backgroundColorBody;
-    p.style.color = 'white';
+    p.style.backgroundColor = backgroundColorBody;//seta o background color do paragra com o do body
+    p.style.color = 'white';//seta a cor do texto do paragrafo de branco
     
 }
