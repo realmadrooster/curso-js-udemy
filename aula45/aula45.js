@@ -35,12 +35,15 @@ function retornaHora(data) {
 }
 //retornaHora(new Date());
 try {
+    //é executada quando nao ha erros
     const data = new Date('01-01-1970 12:58:12');
-    const hora = retornaHora();
+    const hora = retornaHora(13);
     console.log(hora);
 } catch(e) {
+    //é executada quando ha erros
     //tratar erro
     //console.log(e);
 } finally {
+    //sempre é executada
     console.log('tenha um bom dia.');
 }
