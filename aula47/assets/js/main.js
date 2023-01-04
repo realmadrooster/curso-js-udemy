@@ -29,7 +29,7 @@ function relogio(){
         }
         if (elemento.classList.contains('pausar')){
             relogio.classList.add('pausado')//adiciona a classe pausado
-            clearInterval(timer);
+            clearInterval(timer);//para de executar
         }
     })
     // iniciar.addEventListener('click', function(event) {
