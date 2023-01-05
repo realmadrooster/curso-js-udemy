@@ -17,7 +17,7 @@ function relogio(){
     document.addEventListener('click', function(evento) {
         const elemento = evento.target;
         if (elemento.classList.contains('zerar')){
-            clearInterval(timer);
+            clearInterval(timer);// recebe o retorno de setInterval e para setinterval
             relogio.innerHTML='00:00:00';
             relogio.classList.remove('pausado');
             segundos = 0;

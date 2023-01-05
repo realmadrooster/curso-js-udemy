@@ -29,4 +29,4 @@ do {
     rand = random(min, max);
     console.log(rand);
 
-}while(rand !==10);
+}while(rand !== 10);

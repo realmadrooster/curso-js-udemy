@@ -20,7 +20,7 @@ function limpaInput() {
 }
 
 function criaBotaoApagar(li) {
-    li.innerText += ' ';
+    li.innerText += ' ';//espaço entre o li e o botao apagar
     const BotaoApagar = document.createElement('button');
     BotaoApagar.innerText = 'Apagar';
     //BotaoApagar.classList.add('pagar');
