@@ -9,7 +9,7 @@ function criaPessoa(nome, sobrenome, altura, peso) {
         },
         altura,
         peso,
-        get nomeCompleto() {//GEtter
+        get nomeCompleto() {//GEtter faz com que o metodo seja tratado como um atributo
             return `${this.nome} ${this.sobrenome}`;
         },
         //setter //permite que setemos os valores dos atributos externamente 
