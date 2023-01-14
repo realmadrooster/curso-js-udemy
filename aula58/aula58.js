@@ -15,7 +15,7 @@ function Pessoa(nome, sobrenome) {
 
     this.metodo = function() {
         console.log(this.nome + ': Sou um metodo');
-    }
+    };
 }
 
 const p1 = new Pessoa('Luiz', 'Carlos');
