@@ -20,6 +20,7 @@
 // }
 
 function retornaHora(data) {
+    
     if (data && !(data instanceof Date)) {
         throw new TypeError('Esperando instancia de data');
     }
@@ -37,12 +38,13 @@ function retornaHora(data) {
 try {
     //é executada quando nao ha erros
     const data = new Date('01-01-1970 12:58:12');
-    const hora = retornaHora(13);
+    
+    const hora = retornaHora(data);
     console.log(hora);
 } catch(e) {
     //é executada quando ha erros
     //tratar erro
-    //console.log(e);
+    console.log(e);
 } finally {
     //sempre é executada
     console.log('tenha um bom dia.');
