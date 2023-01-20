@@ -65,7 +65,7 @@ function salvarTarefas() {
     //console.log(listaDeTarefas);
     
     const tarefasJSON = JSON.stringify(listaDeTarefas);//salvo como uma string do array e convertido para string no formato json => é uma string que posso pegar depois de volta e converter em um array
-    localStorage.setItem('tarefas', tarefasJSON);//nome tarefas e tarefasJSON o que sera salvo 
+    localStorage.setItem('tarefas', tarefasJSON);//nome do arquivo sera tarefas e tarefasJSON o que sera salvo 
 }
 
 function adicionaTarefasSalvas() {
