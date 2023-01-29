@@ -33,9 +33,9 @@ console.log(p1.imc);
 const p2 = criaPessoa('Maria', 'Joaquina', 1.6, 42);
 console.log(p2.fala('falando sobre js'));
 //console.log(p2.imc());//como fazer sem a definicao do metodo com o get
-console.log(p1.imc);
+console.log(`${p1.imc} teste`);
 //p1.nomeCompleto = 'Luiz carlos pinto junior';
-p1.nomeCompleto = 'Iago Ferreira Pinto'
+p1.nomeCompleto = 'Iago Oliveira Pinto'
 console.log(p1.nome);
 console.log(p1.sobrenome);
 console.log(p1.fala('falando sobre Maria'));
