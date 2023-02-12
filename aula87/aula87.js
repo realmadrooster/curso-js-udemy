@@ -37,8 +37,7 @@ esperaAi('Conexao com o BD', rand(1, 3)).then(resposta => {
     console.log(resposta);
 }).then(() => {
     console.log('Eu serei o ultimo a ser exibido');
-})
-.catch(e => {
+}).catch(e => {
     console.log('ERRO:', e);
 });
 
