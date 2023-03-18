@@ -1,0 +1,37 @@
+<!--inserindo conteudo com ejs em arquivos-->
+<%- include('includes/head'); %>
+
+<body>
+
+  <section class="container">
+    <h1><%= umaVariavelLocal %><!--variavel do middleware-->
+
+      <!--Adicionando um for com ejs-->
+      <!--<% numeros.forEach(num => { %>-->
+      <!--  <%= num %><br>
+      <% }); %>-->
+<!--controle de fluxo -> verificar se a variavel foi checada-->
+
+      <!--<% if(typeof titulo === 'galo') { %>-->
+
+        <!--<%= titulo %>--> <!--se o titulo nao for undefined exibe o titulo-->
+
+      <!--<% } else { %>-->
+          <!--O titulo nao foi enviado.-->
+      <!--<% } %>-->  
+
+      <!--<%= titulo %><br>--><!--mais seguro de ser utilizado-->
+      <!--<%- titulo %>--><!-- usa quando souber que o conteudo que esta vindo é html-->
+    
+    </h1>
+    <form action="/" method="post">
+      <label>Cliente</label>
+      <input type="text" name="cliente" id="">
+      <button type="submit">Enviar</button>
+    </form>
+    
+   
+  </section>
+  
+<%- include('includes/footer'); %>
+ 
