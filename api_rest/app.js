@@ -1,1 +1,1 @@
-console.log(teste); // eslint-disable-line
+// eslint-disable-line
