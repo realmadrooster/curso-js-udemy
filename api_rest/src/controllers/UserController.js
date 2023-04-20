@@ -8,7 +8,8 @@ class UserController {
     } catch (e) {
       res.status(400).json({
         errors: e.errors.map((err) => err.message),
-    });
+      });
+    }
   }
 }
 

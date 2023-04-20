@@ -39,9 +39,11 @@ export default class User extends Model {
             msg: 'A senha deve ter entre 6 e 50 caracteres',
           },
         },
-    }, {
+      },
+    },
+    {
       sequelize,
-    });
+    }
 
     this.addHook('beforeSave', async user => {
       user.password = await bcryptjs.hash(user.password, 8);
