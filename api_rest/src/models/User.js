@@ -18,7 +18,7 @@ export default class User extends Model {
         type: Sequelize.STRING,
         defaultValue: '',
         unique: {
-          msg: 'Email ja existe'
+          msg: 'Email já existe',
         },
         validate: {
           isEmail: {
@@ -36,18 +36,24 @@ export default class User extends Model {
         validate: {
           len: {
             args: [6, 50],
-            msg: 'A senha deve ter entre 6 e 50 caracteres',
+            msg: 'A senha precisa ter entre 6 e 50 caracteres',
           },
         },
       },
-    },
-    {
+    }, {
       sequelize,
-    }
-
-    this.addHook('beforeSave', async user => {
-      user.password = await bcryptjs.hash(user.password, 8);
     });
+
+    this.addHook('beforeSave', async (user) => {
+      if (user.password) {
+        user.password_hash = await bcryptjs.hash(user.password, 8);
+      }
+    });
+
     return this;
+  }
+
+  passwordIsValid(password) {
+    return bcryptjs.compare(password, this.password_hash);
   }
 }
