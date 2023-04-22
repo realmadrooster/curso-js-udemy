@@ -5,7 +5,6 @@ const router = new Router();
 
 router.post('/', userController.store);
 
-
 export default router;
 
 /*
