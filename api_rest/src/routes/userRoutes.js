@@ -6,10 +6,10 @@ import loginRequired from '../middlewares/loginRequired';
 const router = new Router();
 
 router.post('/', userController.store);
-router.get('/', loginRequired, userController.index);
-router.get('/:id', userController.show);
-router.put('/:id', userController.update);
-router.delete('/:id', userController.delete);
+router.get('/', loginRequired, userController.index);// lista usuario -> nao deveria existir
+router.get('/:id', userController.show);// lista usuarios -> nao deveria existir
+router.put('/', loginRequired, userController.update);// deve-se retirar o id
+router.delete('/', loginRequired, userController.delete);// deve-se retirar o id
 
 export default router;
 
