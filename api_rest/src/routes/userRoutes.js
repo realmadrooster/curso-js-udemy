@@ -5,7 +5,7 @@ import loginRequired from '../middlewares/loginRequired';
 
 const router = new Router();
 
-router.post('/', userController.store);
+router.post('/', loginRequired, userController.store);
 router.get('/', loginRequired, userController.index);// lista usuario -> nao deveria existir
 router.get('/:id', userController.show);// lista usuarios -> nao deveria existir
 router.put('/', loginRequired, userController.update);// deve-se retirar o id
