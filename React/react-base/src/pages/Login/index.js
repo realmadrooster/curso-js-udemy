@@ -12,6 +12,7 @@ export default function Login() {
     </Title>
     <Paragrafo>Galo Forte Vingador</Paragrafo>
     <a href="https://www.atletico.com.br" target="_blank">Champ</a>
+    <button type='button'>Enviar</button>
     </Container>
   );
 }
