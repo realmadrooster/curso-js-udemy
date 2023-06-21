@@ -1,9 +1,9 @@
-//const HomeModel = require('../models/HomeModel');
+const HomeModel = require('../models/HomeModel');
 
 //criando dados na base
 HomeModel.create({
-    titulo: 'GALO CAMPEAO MUNDIAL 2023',
-    descricao: 'Quero ganhar a segunda.'
+    titulo: 'GALO bi CAMPEAO MUNDIAL 2023, 2024',
+    descricao: 'Quero ganhar a terceira.'
 }).then(dados => console.log(dados))
 .catch(e => console.log(e));
 
@@ -11,7 +11,7 @@ HomeModel.create({
 /*HomeModel.find({   
 //}).then(dados => console.log(dados))
 //.catch(e => console.log(e));
-*/
+-> codigo acima mostra os dados do banco*/
 
 exports.paginaInicial = (req, res) => {
     res.render('index');
