@@ -16,7 +16,8 @@
 //outra forma de chamar o middleware global
 exports.middlewareGlobal = (req, res, next) => {
     //injetando conteudo em todas as rotas
-    res.locals.umaVariavelLocal = 'Este é o valor da variável local.'
+    res.locals.errors = req.flash('errors');
+    res.locals.success = req.flash('success');
     next();//sempre lembrar de chamar
 };
 
