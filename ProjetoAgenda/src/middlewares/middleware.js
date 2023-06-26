@@ -18,11 +18,12 @@ exports.middlewareGlobal = (req, res, next) => {
     //injetando conteudo em todas as rotas
     res.locals.errors = req.flash('errors');
     res.locals.success = req.flash('success');
+    res.locals.user = req.session.user;
     next();//sempre lembrar de chamar
 };
 
 exports.outroMiddleware = (req, res, next) => {
-    console.log('Sou seu outro middleware');
+    
     next();
 };
 
