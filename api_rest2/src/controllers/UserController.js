@@ -59,6 +59,30 @@ class UserController {
   }
 
   // delete
+  async delete(req, res) {
+    try {
+      if (!req.params.id) {
+        return res.status(400).json({
+          errors: ['ID nao enviado'],
+        });
+      }
+      const user = await User.findByPk(req.params.id);
+
+      if (!user) {
+        return res.status(400).json({
+          errors: ['Usuario nao existe'],
+        });
+      }
+
+      await user.destroy();
+
+      return res.json(user);
+    } catch (e) {
+      return res.status(400).json({
+        errors: e.errors.map((err) => err.message),
+      });
+    }
+  }
 }
 
 export default new UserController();
