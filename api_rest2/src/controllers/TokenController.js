@@ -1,7 +1,6 @@
 import jwt from 'jsonwebtoken';
 import User from '../models/User';
 
-
 class TokenController {
   // eslint-disable-next-line consistent-return
   async store(req, res) {
