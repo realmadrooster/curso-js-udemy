@@ -8,7 +8,7 @@ const router = new Router();
 router.post('/', userController.store);
 
 // nao deveriao existir
-// router.get('/', userController.index);// lista usuarios
+router.get('/', userController.index);// lista usuarios
 // router.get('/:id', userController.show);// lista usuario
 
 router.put('/', loginRequired, userController.update);
