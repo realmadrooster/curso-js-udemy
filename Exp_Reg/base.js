@@ -18,6 +18,26 @@ const arquivos = [
     'lista de compras.txt',
 ];
 
+const cpfs = `
+Os cpfs são:
+ 254.224.877-45 215.978.456-12 047.258.369-96
+
+ 963.987.321-00
+`;
+
+const ips = `
+
+Os Ips são:
+    0.0.0.0
+
+    192.168.0.25
+
+        10.10.5.12
+    
+    255.255.255.255
+
+`;
+
 const alfabeto = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz #?  0123456789 @'
 
 const html = '<p>Olá mundo</p> <p>Olá de novo</p> <div>Sou a div</div>';
@@ -26,5 +46,7 @@ module.exports = {
     texto,
     arquivos,
     html,
-    alfabeto
+    alfabeto,
+    cpfs,
+    ips
 }
