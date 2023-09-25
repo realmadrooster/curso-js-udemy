@@ -47,10 +47,16 @@ const alfabeto = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz #?  0123
 
 const html = '<p>Olá mundo</p> <p>Olá de novo</p> <div>Sou a div</div>';
 
+const html2 = `<p data-teste='testes 
+class="teste teste">ola mundo</p> 
+<p>ola mundo</p> 
+<div>Sou a div</div>`;
+
 module.exports = {
     texto,
     arquivos,
     html,
+    html2,
     alfabeto,
     cpfs,
     cpfs2,
