@@ -12,7 +12,7 @@ enum Cores {
   ROSA = 103, // O TS UNE OS VALORES EM UM UNICO ENUM
 }
 
-function escolhaCor(cor: Cores): void {
+export function escolhaCor(cor: Cores): void {
   console.log(Cores[cor]);
 }
 
