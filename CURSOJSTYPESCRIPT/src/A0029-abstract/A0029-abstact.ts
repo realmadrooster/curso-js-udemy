@@ -1,5 +1,3 @@
-import { prototype } from "events";
-
 export abstract class Personagem {
   protected abstract emoji: string;
 
