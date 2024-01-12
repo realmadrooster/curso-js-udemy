@@ -1,4 +1,5 @@
 /*eslint-disable @typescript-eslint/no-namespace */
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 namespace MeuNameSpace {
   export const nomeDoNameSpace = 'Luiz';
 
@@ -14,7 +15,9 @@ namespace MeuNameSpace {
   }
 }
 
-const pessoaDoNamespace = new MeuNameSpace.PessoaDoNameSpace('Carlos');
-console.log(pessoaDoNamespace);
-console.log(MeuNameSpace.nomeDoNameSpace);
-console.log(MeuNameSpace.OutroNameSpace.nomeDoNameSpace);
+// const pessoaDoNamespace = new MeuNameSpace.PessoaDoNameSpace('Carlos');
+// console.log(pessoaDoNamespace);
+// console.log(MeuNameSpace.nomeDoNameSpace);
+// console.log(MeuNameSpace.OutroNameSpace.nomeDoNameSpace);
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+const constDoNamespace = 'valor da const do namespace';
